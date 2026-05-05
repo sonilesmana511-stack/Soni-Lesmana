@@ -1,2 +1,605 @@
 # Soni-Lesmana
-Loa Paseh Caffee
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loa Paseh Coffee - Biji Kopi Aceh Gayo Specialty</title>
+    <meta name="description" content="Green Bean SCA 86+ dan Roasted Fresh dari Loa Paseh Aceh Tengah">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="SB-Mid-client-yourkey"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-gradient-to-br from-emerald-50 via-yellow-50 to-amber-50">
+    <!-- Loading Screen -->
+    <div id="loading" class="fixed inset-0 bg-gradient-to-br from-emerald-600 to-teal-600 flex items-center justify-center z-[9999]">
+        <div class="text-center text-white">
+            <div class="w-24 h-24 border-4 border-white/30 border-t-white rounded-full mx-auto mb-8 animate-spin"></div>
+            <div class="text-2xl font-bold tracking-wide">Loa Paseh Coffee</div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-emerald-700/95 via-teal-700/95 to-amber-600/95 text-white shadow-2xl fixed w-full z-50 backdrop-blur-xl border-b border-white/20">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3 group hover:scale-105 transition-all">
+                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:rotate-12 transition-all">
+                    <i class="fas fa-coffee text-2xl"></i>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold tracking-wide">Loa Paseh Coffee</div>
+                    <div class="text-sm opacity-90 font-medium">Gayo Specialty 86+</div>
+                </div>
+            </a>
+            <div class="flex items-center space-x-4 lg:space-x-6">
+                <a href="#products" class="px-4 py-2 rounded-xl font-semibold hover:bg-white/20 transition-all">Produk</a>
+                <a href="#about" class="px-4 py-2 rounded-xl font-semibold hover:bg-white/20 transition-all">Tentang</a>
+                <a href="#contact" class="px-4 py-2 rounded-xl font-semibold hover:bg-white/20 transition-all">Kontak</a>
+                <a href="admin.html" target="_blank" class="px-4 py-2 bg-amber-500/30 hover:bg-amber-500/50 rounded-xl font-semibold transition-all">
+                    <i class="fas fa-cog mr-2"></i>Admin
+                </a>
+                <div class="relative p-3 hover:bg-white/20 rounded-2xl transition-all cursor-pointer" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag text-xl"></i>
+                    <span id="cartCount" class="absolute -top-1 -right-1 min-w-[24px] h-6 flex items-center justify-center text-xs font-bold bg-gradient-to-r from-red-500 to-rose-500 text-white rounded-full shadow-lg ring-2 ring-white/50">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="min-h-screen flex items-center justify-center text-center text-white pt-28 pb-20 bg-hero-loa-paseh relative overflow-hidden">
+        <!-- Dynamic particles -->
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-20 w-64 h-64 bg-emerald-400/20 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-32 right-32 w-96 h-96 bg-amber-400/20 rounded-full blur-3xl animate-pulse delay-1000"></div>
+        </div>
+        <div class="relative z-10 max-w-6xl mx-auto px-6">
+            <div class="mb-12">
+                <span class="inline-block px-8 py-3 bg-gradient-to-r from-amber-500/90 to-orange-500/90 text-black font-bold rounded-3xl text-lg tracking-wide shadow-2xl mb-8 backdrop-blur-sm">
+                    🌿 Loa Paseh • Aceh Tengah 1600mdpl
+                </span>
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-black mb-8 bg-gradient-to-r from-amber-300 via-orange-300 to-yellow-300 bg-clip-text text-transparent drop-shadow-4xl leading-none tracking-tight">
+                    LOA PASEH<br>
+                    <span class="text-5xl md:text-7xl lg:text-8xl">COFFEE</span>
+                </h1>
+            </div>
+            <p class="text-2xl md:text-3xl mb-16 max-w-4xl mx-auto opacity-95 leading-relaxed drop-shadow-2xl font-light">
+                Specialty Green Bean <span class="font-bold text-amber-300 text-3xl md:text-4xl">SCA 86+</span> dan Roasted Fresh<br>
+                Langsung dari perkebunan keluarga Loa Paseh, Aceh Tengah
+            </p>
+            <div class="flex flex-col xl:flex-row gap-6 justify-center items-center max-w-3xl mx-auto mb-20">
+                <a href="#products" class="group bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 px-16 py-8 rounded-3xl text-2xl font-bold shadow-2xl hover:shadow-emerald-500/50 transform hover:-translate-y-3 transition-all duration-500 w-full xl:w-auto text-center backdrop-blur-sm border border-white/20 hover:border-emerald-300/50">
+                    <i class="fas fa-store mr-4 text-xl group-hover:animate-bounce"></i>
+                    Beli Biji Kopi
+                </a>
+                <a href="https://wa.me/6281234567890?text=%F0%9F%8C%BF%20Halo%20Loa%20Paseh%20Coffee%2C%0A%F0%9F%94%A5%20Saya%20minat%20beli%20biji%20kopi%20Gayo%20Specialty" target="_blank" 
+                   class="group border-4 border-white/80 hover:border-amber-300 hover:bg-white/10 px-16 py-8 rounded-3xl text-2xl font-bold backdrop-blur-sm transition-all duration-500 w-full xl:w-auto text-center hover:scale-105">
+                    <i class="fab fa-whatsapp text-2xl mr-4 text-emerald-400 group-hover:text-emerald-300"></i>
+                    Chat WA Sekarang
+                </a>
+            </div>
+            <div class="grid grid-cols-3 gap-8 max-w-4xl mx-auto text-center text-xl opacity-90 mb-8">
+                <div><i class="fas fa-award text-3xl text-amber-400 mb-2 block"></i>SCA 86+</div>
+                <div><i class="fas fa-mountain text-3xl text-amber-400 mb-2 block"></i>1600mdpl</div>
+                <div><i class="fas fa-shipping-fast text-3xl text-amber-400 mb-2 block"></i>Free Ongkir</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-6xl lg:text-7xl font-black bg-gradient-to-r from-emerald-700 via-teal-700 to-amber-600 bg-clip-text text-transparent mb-8 tracking-tight">
+                    Biji Kopi Specialty
+                </h2>
+                <p class="text-2xl text-gray-700 font-light max-w-3xl mx-auto">
+                    Green Bean mentah siap roasting & Roasted fresh mingguan
+                </p>
+                <div class="flex justify-center mt-12">
+                    <div class="flex bg-white/60 backdrop-blur-xl rounded-3xl p-1 shadow-2xl">
+                        <button onclick="filterProducts('all')" class="flex-1 px-8 py-4 rounded-2xl font-bold text-xl transition-all bg-white shadow-lg" data-active="true">Semua Produk</button>
+                        <button onclick="filterProducts('green')" class="flex-1 px-8 py-4 rounded-2xl font-bold text-xl hover:bg-white/80 transition-all">Green Bean</button>
+                        <button onclick="filterProducts('roasted')" class="flex-1 px-8 py-4 rounded-2xl font-bold text-xl hover:bg-white/80 transition-all">Roasted Bean</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-12">
+                <!-- Dynamic products -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="py-32 bg-gradient-to-b from-emerald-50/70 to-white/50 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-center">
+                <div class="group p-12 rounded-3xl bg-white/70 backdrop-blur-xl shadow-2xl hover:shadow-emerald-500/20 border border-emerald-200/50 hover:border-emerald-300/80 transition-all hover:-translate-y-4">
+                    <div class="w-24 h-24 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl shadow-2xl group-hover:scale-110 transition-all">
+                        <i class="fas fa-seedling text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Green Bean Fresh</h3>
+                    <p class="text-xl text-gray-700 leading-relaxed max-w-md mx-auto">
+                        Cherry ripe manual pick. Wet hull Aceh 36 jam. Moisture 11-12%.
+                    </p>
+                </div>
+                <div class="group p-12 rounded-3xl bg-white/70 backdrop-blur-xl shadow-2xl hover:shadow-amber-500/20 border border-amber-200/50 hover:border-amber-300/80 transition-all hover:-translate-y-4">
+                    <div class="w-24 h-24 bg-gradient-to-br from-amber-400 to-orange-500 rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl shadow-2xl group-hover:scale-110 transition-all">
+                        <i class="fas fa-fire text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb-6">Fresh Roast</h3>
+                    <p class="text-xl text-gray-700 leading-relaxed max-w-md mx-auto">
+                        Drum roaster 5kg. Profile custom per batch. Roast date printed.
+                    </p>
+                </div>
+                <div class="group p-12 rounded-3xl bg-white/70 backdrop-blur-xl shadow-2xl hover:shadow-teal-500/20 border border-teal-200/50 hover:border-teal-300/80 transition-all hover:-translate-y-4">
+                    <div class="w-24 h-24 bg-gradient-to-br from-teal-400 to-emerald-500 rounded-3xl flex items-center justify-center mx-auto mb-8 text-3xl shadow-2xl group-hover:scale-110 transition-all">
+                        <i class="fas fa-shipping-fast text-white"></i>
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-800 mb
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loa Paseh Coffee - Biji Kopi Aceh Gayo Premium</title>
+    <meta name="description" content="Green Bean & Roasted Coffee dari Dataran Tinggi Gayo Aceh. Kualitas Specialty Grade.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="font-poppins bg-gradient-to-br from-emerald-50 via-yellow-50 to-amber-50">
+    
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-emerald-700 via-teal-700 to-amber-600 text-white shadow-2xl fixed w-full z-50 backdrop-blur-md">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="w-14 h-14 bg-gradient-to-br from-amber-400 to-orange-500 rounded-2xl flex items-center justify-center shadow-lg">
+                    <i class="fas fa-coffee text-2xl"></i>
+                </div>
+                <div>
+                    <div class="text-2xl font-bold tracking-wide">Loa Paseh Coffee</div>
+                    <div class="text-sm opacity-90 font-medium">Aceh Gayo Specialty</div>
+                </div>
+            </div>
+            <div class="flex items-center space-x-6">
+                <a href="#products" class="hover:text-amber-200 px-4 py-2 rounded-xl transition-all hover:bg-white/20">Produk</a>
+                <a href="#about" class="hover:text-amber-200 px-4 py-2 rounded-xl transition-all hover:bg-white/20">Tentang</a>
+                <a href="#contact" class="hover:text-amber-200 px-4 py-2 rounded-xl transition-all hover:bg-white/20">Kontak</a>
+                <div class="relative cursor-pointer p-2 hover:bg-white/20 rounded-xl transition-all" onclick="toggleCart()">
+                    <i class="fas fa-shopping-bag text-xl"></i>
+                    <span id="cartCount" class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center font-bold shadow-lg">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center text-center text-white pt-24 pb-20 bg-hero-loa-paseh relative overflow-hidden">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="relative z-10 max-w-5xl mx-auto px-6">
+            <div class="mb-8">
+                <span class="inline-block px-6 py-2 bg-amber-500/90 text-black font-bold rounded-full text-lg tracking-wide mb-6">
+                    🌿 Aceh Gayo Highland
+                </span>
+                <h1 class="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-amber-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent drop-shadow-4xl leading-tight">
+                    Loa Paseh Coffee
+                </h1>
+            </div>
+            <p class="text-xl md:text-2xl mb-12 max-w-3xl mx-auto opacity-95 leading-relaxed drop-shadow-lg">
+                <strong>Specialty Green Bean</strong> dan <strong>Roasted Fresh</strong> langsung dari perkebunan Loa Paseh, 
+                Aceh Tengah. Elevasi 1.600mdpl. <span class="text-amber-300 font-bold">Score 86+</span>
+            </p>
+            <div class="flex flex-col lg:flex-row gap-6 justify-center items-center max-w-2xl mx-auto">
+                <a href="#products" class="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 px-12 py-6 rounded-3xl text-xl font-bold shadow-2xl hover:shadow-emerald-500/50 transform hover:-translate-y-2 transition-all duration-500 w-full lg:w-auto text-center">
+                    🛒 Lihat Produk
+                </a>
+                <a href="https://wa.me/6281234567890?text=Halo%20Loa%20Paseh%20Coffee%2C%0ASaya%20minat%20beli%20biji%20kopi%20Gayo" target="_blank" 
+                   class="border-4 border-white/80 hover:border-amber-300 px-12 py-6 rounded-3xl text-xl font-bold hover:bg-white/20 backdrop-blur-sm transition-all duration-500 w-full lg:w-auto text-center">
+                    📱 Chat WhatsApp
+                </a>
+            </div>
+            <div class="mt-16 flex flex-wrap justify-center gap-4 text-sm opacity-90">
+                <span>🚚 Free Ongkir >5kg</span>
+                <span>📦 Vakum Pack 1kg</span>
+                <span>🌡️ Fresh Roast Mingguan</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Grid -->
+    <section id="products" class="py-28">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-24">
+                <h2 class="text-5xl lg:text-6xl font-bold bg-gradient-to-r from-emerald-700 via-teal-700 to-amber-600 bg-clip-text text-transparent mb-6">
+                    Biji Kopi Premium
+                </h2>
+                <div class="flex justify-center space-x-8 mb-8">
+                    <button onclick="filterProducts('all')" class="px-6 py-2 rounded-xl font-bold text-lg bg-emerald-500/20 hover:bg-emerald-500/40 transition-all">Semua</button>
+                    <button onclick="filterProducts('green')" class="px-6 py-2 rounded-xl font-bold text-lg bg-green-500/20 hover:bg-green-500/40 transition-all">Green Bean</button>
+                    <button onclick="filterProducts('roasted')" class="px-6 py-2 rounded-xl font-bold text-lg bg-orange-500/20 hover:bg-orange-500/40 transition-all">Roasted</button>
+                </div>
+            </div>
+
+            <div id="productsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Products will be populated by JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Loa Paseh -->
+    <section id="about" class="py-28 bg-gradient-to-b from-white/70 to-emerald-50/50 backdrop-blur-xl">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-5xl font-bold text-gray-800 mb-8 leading-tight">
+                        Loa Paseh Coffee<br>
+                        <span class="bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">Aceh Gayo</span>
+                    </h2>
+                    <p class="text-xl text-gray-700 mb-8 leading-relaxed">
+                        Dari perkebunan keluarga di ketinggian 1.600 mdpl Loa Paseh, Aceh Tengah. 
+                        Dipetik manual cherry ripe oleh petani lokal. Proses <strong>wet hull autentik Aceh</strong>.
+                    </p>
+                    <div class="grid grid-cols-2 gap-8 mb-12">
+                        <div class="text-center p-6 bg-white/50 rounded-2xl backdrop-blur-sm shadow-xl">
+                            <div class="text-4xl font-bold text-emerald-600 mb-2">86+</div>
+                            <div class="text-sm font-bold text-gray-700 uppercase tracking-wide">SCA Score</div>
+                        </div>
+                        <div class="text-center p-6 bg-white/50 rounded-2xl backdrop-blur-sm shadow-xl">
+                            <div class="text-4xl font-bold text-amber-600 mb-2">1.600m</div>
+                            <div class="text-sm font-bold text-gray-700 uppercase tracking-wide">Elevasi</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4 text-lg text-gray-700">
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-seedling text-emerald-500 mt-1"></i>
+                            <span>Varietas: Sigarar Utara, Linie S, Ethiopian Heirloom</span>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <i class="fas fa-tint text-blue-500 mt-1"></i>
+                            <span>Proses: Wet Hull Aceh (24-36 jam fermentasi)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-emerald-400/20 to-amber-400/20 rounded-3xl p-12 backdrop-blur-xl shadow-2xl">
+                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgdmlld0JveD0iMCAwIDQwMCA0MDAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSI0MDAiIGhlaWdodD0iNDAwIiBmaWxsPSIjRjNGQjVGIiByeD0iMzAiLz4KPGNpcmNsZSBjeD0iMTAwIiBjeT0iMTUwIiByPSI2MCIgZmlsbD0iI0UyRTdCMyIvPgo8Y2lyY2xlIGN4PSIzMDAiIGN5PSIyNTAiIHI9IjgwIiBmaWxsPSIjRjQ5ODI2Ii8+CjxjaXJjbGUgY3g9IjIwMCIgY3k9IjMwMCIgcj0iNDAiIGZpbGw9IiM5Q0Y4QjEiLz4KPHBhdGggZD0iTTIwMCAzMDAgUTI1MCAyODAgMzAwIDI1MCIgZmlsbD0iI0Y0OTgyNiIvPgo8L3N2Zz4K" alt="Loa Paseh Coffee" class="w-full h-auto rounded-2xl shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div id="cartModal" class="fixed inset-0 bg-black/70 backdrop-blur-md z-[1000] hidden flex items-end lg:items-center justify-center p-6 lg:p-12 animate-fadeIn">
+        <div class="bg-white/95 backdrop-blur-xl rounded-3xl lg:rounded-t-3xl p-8 w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-2xl lg:shadow-3xl border border-white/50">
+            <div class="flex justify-between items-center mb-10 pb-6 border-b border-gray-200">
+                <h3 class="text-3xl lg:text-4xl font-bold text-gray-800 flex items-center">
+                    <i class="fas fa-coffee-bag ml-1 mr-4 text-emerald-500 text-3xl"></i>
+                    Keranjang Loa Paseh
+                </h3>
+                <button onclick="toggleCart()" class="text-4xl text-gray-500 hover:text-gray-700 p-2 -m-2 rounded-2xl hover:bg-gray-200 transition-all">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div id="cartItems" class="mb-12 space-y-6">
+                <!-- Cart items populated by JS -->
+            </div>
+            
+            <div class="sticky bottom-0 bg-white/50 backdrop-blur-sm pt-8 border-t border-gray-200 lg:static">
+                <div class="text-3xl lg:text-4xl font-bold text-emerald-800 mb-10 text-right" id="cartTotal">
+                    Total: Rp 0
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <a href="#" onclick="orderWhatsApp(event)" class="group bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white py-6 px-8 lg:px-12 rounded-3xl font-bold text-xl lg:text-2xl shadow-2xl hover:shadow-emerald-500/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                        <i class="fab fa-whatsapp text-2xl mr-4 group-hover:animate-bounce"></i>
+                        <span>Order WhatsApp</span>
+                    </a>
+                    <button onclick="processPayment()" class="bg-gradient-to-r from-amber-500 to-orange-600 hover:from-amber-600 hover:to-orange-700 text-white py-6 px-8 lg:px-12 rounded-3xl font-bold text-xl lg:text-2xl shadow-2xl hover:shadow-amber-500/50 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-credit-card text-2xl mr-4"></i>
+                        <span>Bayar Online</span>
+                    </button>
+                </div>
+                <div class="mt-8 pt-6 border-t border-gray-200 text-center text-sm text-gray-600 space-y-2">
+                    <div>🚚 Gratis ongkir Jabodetabek >5kg | Seluruh Indonesia >10kg</div>
+                    <div>📦 Kemasan vakum 1kg aluminium foil</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer id="contact" class="py-16 bg-gradient-to-t from-emerald-800 to-teal-900 text-white">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <div class="mb-12">
+                <div class="text-4xl mb-6">Loa Paseh Coffee</div>
+                <p class="text-xl mb-8 opacity-90 max-w-2xl mx-auto">
+                    Specialty Coffee dari Aceh Gayo. Green Bean & Fresh Roast.
+                </p>
+            </div>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8 mb-12 text-lg">
+                <a href="https://wa.me/6281234567890" target="_blank" class="group flex items-center space-x-3 px-8 py-4 bg-emerald-500/20 hover:bg-emerald-500/40 rounded-3xl transition-all group-hover:scale-105">
+                    <i class="fab fa-whatsapp text-2xl text-emerald-400 group-hover:text-emerald-300"></i>
+                    <span>Chat Order</span>
+                </a>
+                <a href="https://maps.google.com/?q=Loa+Paseh+Aceh" target="_blank" class="group flex items-center space-x-3 px-8 py-4 bg-amber-500/20 hover:bg-amber-500/40 rounded-3xl transition-all group-hover:scale-105">
+                    <i class="fas fa-map-marker-alt text-2xl text-amber-400 group-hover:text-amber-300"></i>
+                    <span>Loa Paseh, Aceh</span>
+                </a>
+            </div>
+            <div class="text-lg opacity-75 space-y-2">
+                <p>📞 WA Order: 0812-3456-7890</p>
+                <p>📧 loapasehcoffee@gmail.com</p>
+                <p>🏔️ Perkebunan Loa Paseh, Takengon, Aceh Tengah</p>
+            </div>
+            <div class="mt-12 pt-8 border-t border-white/20 text-sm opacity-75">
+                © 2024 Loa Paseh Coffee. Semua hak cipta dilindungi. Made with ☕ in Aceh Gayo.
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .bg-hero-loa-paseh {
+            background: linear-gradient(135deg, 
+                rgba(16,185,129,0.4) 0%, 
+                rgba(251,191,36,0.3) 50%, 
+                rgba(245,158,11,0.4) 100%),
+            url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900'%3E%3Crect fill='%2324513C' width='1400' height='900' rx='40'/%3E%3Cpath fill='%2334582F' d='M0 400 Q300 200 700 350 Q1100 500 1400 400 L1400 900 H0 Z'/%3E%3Ccircle fill='%234A7C59' cx='200' cy='250' r='100'/%3E%3Ccircle fill='%236B4E31' cx='1200' cy='600' r='120'/%3E%3Ccircle fill='%238B4513' cx='400' cy='700' r='80'/%3E%3Ccircle fill='%23D2B48C' cx='1000' cy='150' r='60'/%3E%3C/svg%3E");
+            background-size: cover;
+            background-position: center;
+        }
+        
+        @keyframes fadeIn { from { opacity: 0; transform: scale(0.95) translateY(20px); } to { opacity: 1; transform: scale(1) translateY(0); } }
+        @keyframes slideInRight { from { transform: translateX(100%); opacity: 0; } to { transform: translateX(0); opacity: 1; } }
+        @keyframes slideOutRight { from { transform: translateX(0); opacity: 1; } to { transform: translateX(100%); opacity: 0; } }
+        
+        .animate-fadeIn { animation: fadeIn 0.4s ease-out; }
+        
+        .font-poppins { font-family: 'Poppins', sans-serif; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
+    </style>
+
+    <script>
+        // Products data khusus Loa Paseh Coffee
+        const products = [
+            {
+                id: 'gayo-green-specialty',
+                name: 'Gayo Specialty Green Bean',
+                desc: 'Single origin Loa Paseh 1600mdpl. SCA 86+. Wet hull autentik.',
+                price: 215000,
+                type: 'green',
+                tags: ['Grade 1 SP', 'SCA 86+', 'Stok 120kg']
+            },
+            {
+                id: 'gayo-roasted-light',
+                name: 'Gayo Light Roast',
+                desc: 'Fresh roast light profile. Citrus & floral notes. Pour over perfect.',
+                price: 265000,
+                type: 'roasted',
+                tags: ['Light Roast', 'SCA 87', 'Stok 80kg']
+            },
+            {
+                id: 'gayo-roasted-medium',
+                name: 'Gayo Medium Roast',
+                desc: 'Medium roast signature Loa Paseh. Chocolate & caramel balance.',
+                price: 255000,
+                type: 'roasted',
+                tags: ['Medium Roast', 'Espresso', 'Stok 100kg']
+            },
+            {
+                id: 'sigarar-green',
+                name: 'Sigarar Utara Green',
+                desc: 'Varietas langka Gayo. Acidity tinggi, body medium. Export ready.',
+                price: 235000,
+                type: 'green',
+                tags: ['Varietal', 'Rare', 'Stok 50kg']
+            },
+            {
+                id: 'gayo-dark-roast',
+                name: 'Gayo Dark Roast',
+                desc: 'Dark roast full city+. Smoky & bold. French press & espresso.',
+                price: 245000,
+                type: 'roasted',
+                tags: ['Dark Roast', 'Bold', 'Stok 90kg']
+            },
+            {
+                id: 'honey-green',
+                name: 'Gayo Honey Green Bean',
+                desc: 'Proses honey natural. Sweet & fruity. Limited batch.',
+                price: 285000,
+                type: 'green',
+                tags: ['Honey Process', 'Limited', 'Stok 30kg']
+            }
+        ];
+
+        let cart = [];
+        let filteredProducts = 'all';
+
+        function init() {
+            renderProducts(products);
+            updateCart();
+        }
+
+        function renderProducts(prods) {
+            document.getElementById('productsGrid').innerHTML = prods.map(product => `
+                <div class="group bg-white/80 backdrop-blur-xl rounded-3xl p-10 shadow-2xl hover:shadow-3xl border-2 border-white/60 hover:border-emerald-200/80 transition-all duration-500 hover:-translate-y-4 cursor-pointer overflow-hidden">
+                    <div class="w-28 h-28 bg-gradient-to-br from-emerald-400 via-teal-400 to-amber-400 rounded-3xl flex items-center justify-center mx-auto mb-8 group-hover:scale-110 transition-all duration-500 shadow-2xl">
+                        <i class="fas fa-${product.type === 'green' ? 'seedling' : 'fire'} text-4xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl lg:text-3xl font-bold text-gray-800 mb-4 text-center leading-tight">${product.name}</h3>
+                    <p class="text-gray-600 mb-8 text-center leading-relaxed px-4">${product.desc}</p>
+                    <div class="text-4xl font-bold bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent mb-8 text-center">
+                        Rp ${formatRupiah(product.price)}<span class="text-lg font-normal text-gray-600">/kg</span>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-2 mb-10">
+                        ${product.tags.map(tag => `<span class="px-4 py-2 bg-gradient-to-r from-emerald-100 to-teal-100 text-emerald-800 text-sm font-bold rounded-2xl shadow-sm">${tag}</span>`).join('')}
+                    </div>
+                    <button onclick="addToCart('${product.id}', ${product.price}, '${product.name}')" 
+                            class="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white py-6 px-8 rounded-3xl font-bold text-xl shadow-2xl hover:shadow-emerald-500/50 transition-all duration-300 transform hover:-translate-y-1 group-hover:scale-[1.02]">
+                        <i class="fas fa-bag-shopping mr-3"></i>
+                        Tambah ${product.type === 'green' ? 'Green Bean' : 'Roasted'} ke Keranjang
+                    </button>
+                </div>
+            `).join('');
+        }
+
+        function filterProducts(type) {
+            filteredProducts = type;
+            const filtered = type === 'all' ? products : products.filter(p => p.type === type);
+            renderProducts(filtered);
+        }
+
+        function addToCart(id, price, name) {
+            const existing = cart.find(item => item.id === id);
+            if (existing) {
+                existing.quantity += 1;
+            } else {
+                cart.push({ id, name, price, quantity: 1 });
+            }
+            updateCart();
+            showToast(`${name} ditambahkan! ☕`);
+        }
+
+        function updateCart() {
+            const countEl = document.getElementById('cartCount');
+            const totalEl = document.getElementById('cartTotal');
+            const itemsEl = document.getElementById('cartItems');
+
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            const totalPrice = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+
+            countEl.textContent = totalItems;
+            totalEl.innerHTML = `Total: <span class="text-emerald-600">${formatRupiah(totalPrice)}</span>`;
+
+            if (cart.length === 0) {
+                itemsEl.innerHTML = `
+                    <div class="text-center py-20 px-8">
+                        <div class="w-32 h-32 bg-emerald-100 rounded-3xl flex items-center justify-center mx-auto mb-8">
+                            <i class="fas fa-bag-shopping text-5xl text-emerald-500"></i>
+                        </div>
+                        <h4 class="text-2xl font-bold text-gray-700 mb-4">Keranjang kosong</h4>
+                        <p class="text-gray-600 mb-8">Mulai tambahkan biji kopi favorit Loa Paseh</p>
+                        <a href="#products" class="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-12 py-4 rounded-3xl font-bold hover:shadow-emerald-500/50 transition-all">Lihat Produk</a>
+                    </div>
+                `;
+                return;
+            }
+
+            itemsEl.innerHTML = cart.map(item => `
+                <div class="p-8 bg-gradient-to-r from-emerald-50/50 to-teal-50/50 rounded-3xl backdrop-blur-sm border border-emerald-200/50 shadow-inner">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="flex-1 pr-6">
+                            <h4 class="text-xl lg:text-2xl font-bold text-gray-800 mb-2 leading-tight">${item.name}</h4>
+                            <p class="text-lg text-emerald-700 font-bold">Rp ${formatRupiah(item.price)} / kg</p>
+                        </div>
+                        <div class="flex items-center bg-white/80 px-6 py-4 rounded-3xl shadow-lg border">
+                            <button onclick="changeQty('${item.id}', -1)" class="w-12 h-12 rounded-2xl hover:bg-emerald-100 flex items-center justify-center text-2xl font-bold transition-all">-</button>
+                            <span class="w-20 text-center text-2xl font-bold mx-6 text-gray-800">${item.quantity} kg</span>
+                            <button onclick="changeQty('${item.id}', 1)" class="w-12 h-12 rounded-2xl hover:bg-emerald-100 flex items-center justify-center text-2xl font-bold transition-all">+</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center pt-6 border-t border-emerald-200">
+                        <button onclick="removeItem('${item.id}')" class="text-red-500 hover:text-red-700 flex items-center space-x-2 text-sm font-bold transition-all">
+                            <i class="fas fa-trash"></i>
+                            <span>Hapus</span>
+                        </button>
+                        <div class="text-2xl font-bold text-emerald-700">
+                            Rp ${formatRupiah(item.price * item.quantity)}
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function changeQty(id, delta) {
+            const item = cart.find(item => item.id === id);
+            if (item) {
+                item.quantity += delta;
+                if (item.quantity <= 0) removeItem(id);
+                else updateCart();
+            }
+        }
+
+        function removeItem(id) {
+            cart = cart.filter(item => item.id !== id);
+            updateCart();
+        }
+
+        function toggleCart() {
+            document.getElementById('cartModal').classList.toggle('hidden');
+        }
+
+        function orderWhatsApp(e) {
+            e.preventDefault();
+            if (cart.length === 0) return;
+
+            const orderLines = [
+                '🧾 *PESANAN LOA PASEH COFFEE*',
+                '━━━━━━━━━━━━━━━━━━━━━',
+                ...cart.map((item, index) => `${index + 1}. ${item.name} x${item.quantity}kg = Rp ${formatRupiah(item.price * item.quantity)}`),
+                '━━━━━━━━━━━━━━━━━━━━━',
+                `💰 *TOTAL: Rp ${formatRupiah(cart.reduce((sum, item) => sum + item.price * item.quantity, 0))}*`,
+                '',
+                '📝 DATA DIRI:',
+                'Nama     : [NAMA PELANGGAN]',
+                'No WA    : [NOMOR ANDA]',
+                'Alamat   : [ALAMAT LENGKAP]',
+                'Catatan  : [KEBUTUHAN KHUSUS]',
+                '',
+                '⏱️ Estimasi kirim: 2-4 hari',
+                '🚚 JNE/J&T/TIKI'
+            ];
+
+            const message = encodeURIComponent(orderLines.join('\n'));
+            window.open(`https://wa.me/6281234567890?text=${message}`, '_blank');
+            toggleCart();
+        }
+
+        function processPayment() {
+            showToast('Integrasi Midtrans siap! Hubungi developer untuk aktivasi pembayaran online.');
+        }
+
+        function formatRupiah(angka) {
+            return new Intl.NumberFormat('id-ID').format(angka);
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.className = 'fixed top-28 right-6 z-[2000] px-8 py-5 rounded-2xl shadow-2xl transform translate-x-full animate-slideInRight bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-bold text-lg flex items-center space-x-3';
+            toast.innerHTML = `<i class="fas fa-check-circle text-xl"></i>${message}`;
+            document.body.appendChild(toast);
+
+            setTimeout(() => {
+                toast.classList.remove('animate-slideInRight');
+                toast.classList.add('animate-slideOutRight');
+                setTimeout(() => toast.remove(), 300);
+            }, 3500);
+        }
+
+        // Smooth scrolling & init
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // Close modal on outside click
+        window.onclick = (e) => {
+            const modal = document.getElementById('cartModal');
+            if (e.target === modal) toggleCart();
+        };
+
+        // Initialize
+        init();
+    </script>
+</body>
+</html>
